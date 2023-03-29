@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Humanizer;
 using Colorful;
-
+using ConsoleDump;
 
 namespace Labo9Affichage
 {
@@ -13,6 +13,7 @@ namespace Labo9Affichage
     {
         static void Main(string[] args)
         {
+            TestNuget();
             TestHumain();
             TestConsole();
             System.Console.ReadKey();
@@ -40,9 +41,16 @@ namespace Labo9Affichage
             StyleSheet style = new StyleSheet(System.Drawing.Color.Red);
             Colorful.Console.WriteStyled("Bruh", style);
         }
-        static void TestDNS()
+        static void TestNuget()
         {
-           
+            //Le nuget se nomme consoleDump
+            int testInt = 0;
+            string testString = "bruh";
+            testInt.Dump("int");
+            testString.Dump("string");
+
+            // Cela permet de visualiser nos objet/variable en couleur dans la console
+            // Il est par défaut en blanc
         }
     }
 }
